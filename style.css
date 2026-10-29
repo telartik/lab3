@@ -27,36 +27,28 @@ header p {
     margin: 0;
 }
 
-/* Навігація — завжди горизонтальна */
+/* Навігація — вирівнювання посилань горизонтально по центру */
 nav {
     background-color: #333333;
     padding: 15px;
-}
-
-nav ul {
-    list-style-type: none; /* Прибирає маркери списку */
-    margin: 0;
-    padding: 0;
-    display: flex;         /* Вибудовує елементи в рядок */
+    text-align: center;
+    display: flex;
     justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;       /* Дозволяє переноситись лише якщо зовсім мало місця */
+    flex-wrap: wrap;
+    gap: 10px; /* Відстань між кнопками */
 }
 
-nav li {
-    margin-bottom: 0;
-}
-
+/* Стилі для кнопок меню */
 nav a {
     color: white;
     text-decoration: none;
     padding: 10px 20px;
-    display: block;
+    display: inline-block;
     border-radius: 4px;
     transition: all 0.3s ease;
 }
 
-/* Ефект світіння кнопок при наведенні */
+/* Ефект світіння та підняття кнопок при наведенні */
 nav a:hover {
     background-color: #555555; 
     text-decoration: none;
@@ -139,7 +131,7 @@ footer p {
     margin: 5px;
 }
 
-/* Адаптивність для мобільних (меню залишається в рядок!) */
+/* Адаптивність */
 @media (max-width: 700px) {
     .container {
         flex-direction: column;
@@ -148,6 +140,4 @@ footer p {
     aside, main {
         width: 100%;
     }
-    
-    /* Меню НЕ переноситься у стовпчик, а залишається горизонтальним */
 }
